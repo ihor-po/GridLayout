@@ -1,0 +1,187 @@
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: "Roboto-Light";
+    src: url(../fonts/Roboto-Light.ttf);
+}
+body, html {
+    width: 100%;
+    height: 100vh;
+}
+.main-container {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+}
+.container {
+    width: 816px;
+    margin: 0 auto;
+    display: -moz-grid;
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: minmax(8.13rem,1.5fr) minmax(35rem,7.5fr) minmax(5.63rem, 1fr) minmax(6.25rem, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+                        "h h h h h h h h h h h h"
+                        "c c c c c c c rm rm rm rm rm"
+                        "lp lp lp lp lp lp rp rp rp rp rp rp"
+                        "f f f f f f f f f f f f"
+                        ;
+    height: 100%;
+}
+.header {
+    grid-area: h;
+    background-color: #2185C5;
+}
+.content {
+    grid-area: c;
+    background-color: #FFFFFF;
+    display: -moz-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+.right-menu {
+    grid-area: rm;
+    background-color: #FF7F66;
+}
+.left-part {
+    grid-area: lp;
+    background-color: #2185C5;
+}
+.right-part {
+    grid-area: rp;
+    background-color: #7ECEFD;
+}
+.footer {
+    grid-area: f;
+    background-color: #3E454C;
+}
+.title {
+    display: -moz-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    align-items: center;
+    height: 100%;
+}
+.title_text {
+    margin-left: 2.5rem;
+    color: #FFFFFF;
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 1.5rem;
+}
+.contetnt-title {
+    margin-top: 3.63rem;
+    margin-bottom: 3.75rem;
+    margin-left: 2.5rem;
+}
+.title__h2 {
+    color: #424242;
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 1.4rem;
+}
+.content__text{
+    color: #424242;
+    font-family: 'Roboto-Light', sans-serif;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+    line-height: 1.5rem;
+}
+.rm-title__h3 {
+    color: #424242;
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 1.3rem;
+    margin-left: 2.25rem;
+    margin-top: 3.13rem;
+    margin-bottom: 3.44rem;
+}
+.rm-content {
+    padding: 0 2.25rem;
+}
+.rm-content__text, .rm-content__list {
+    color: #424242;
+    font-family: 'Roboto-Light', sans-serif;
+    font-size: 1.1rem;
+}
+.rm-content__list {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    list-style-type: disc;
+}
+.rm-content__list-item {
+    margin-top: 10px;
+}
+.rm-content__link {
+    color: #424242;
+    text-decoration: none;
+}
+.lp-text, .rp-text {
+    margin-top: 0.8rem;
+    margin-left: 2.5rem;
+}
+.lp-text__p, .rp-text__p {
+    color: #424242;
+    font-family: 'Roboto-Light', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    padding-right: 1rem;
+}
+.f-content{
+    margin-top: 1.9rem;
+    margin-left: 2.19rem;
+}
+.f-content__text, .f-content__link {
+    color: #FFFFFF;
+    font-family: 'Roboto-Light', sans-serif;
+    font-size: 1.1rem;
+}
+@media screen and (max-width: 816px){
+    .container {
+        width: 100%;
+        margin: 0;
+        display: -moz-grid;
+        display: -ms-grid;
+        display: grid;
+        grid-template-rows: minmax(4rem,1.5fr) minmax(25rem,3.5fr) minmax(18rem, 3.5fr) minmax(3rem, 1fr) minmax(3rem, 1fr) minmax(4rem, 1.5fr);
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas:
+          "h h h h h h h h h h h h"
+          "rm rm rm rm rm rm rm rm rm rm rm rm"
+          "c c c c c c c c c c c c"
+          "lp lp lp lp lp lp lp lp lp lp lp lp"
+          "rp rp rp rp rp rp rp rp rp rp rp rp"
+          "f f f f f f f f f f f f"
+    ;
+    }
+}
+@media screen and (max-width: 440px){
+    .title_text{
+        font-size: 1.3rem;
+    }
+    .container {
+        grid-template-rows: minmax(4rem, 1.5fr) minmax(20rem, 3.5fr) minmax(15rem, 3.5fr) minmax(3rem, 1fr) minmax(3rem, 1fr) minmax(4rem, 1.5fr);
+    }
+    .rm-title__h3, .contetnt-title{
+        margin-top: 1.7rem;
+        margin-bottom: 1.7rem;
+    }
+    .content__text, .lp-text__p, .rp-text__p {
+        line-height: 1.3rem;
+        font-size: 0.9rem;
+    }
+    .f-content__text, .f-content__link {
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 346px){
+    .container {
+        grid-template-rows: minmax(4rem, 1.5fr) minmax(20rem, 3.5fr) minmax(15rem, 3.5fr) minmax(3rem, 1fr) minmax(4rem, 1fr) minmax(4rem, 1.5fr);
+    }
+}

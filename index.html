@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+<div class="main-container">
+<div class="container">
+    <header class="header">
+        <div class="title">
+            <h1 class="title_text">Standart two-column layout</h1>
+        </div>
+    </header>
+    <main class="content">
+        <div class="contetnt-title">
+            <h2 class="title__h2">Main content area</h2>
+        </div>
+        <div class="text">
+            <p class="content__text">
+                The main content area is where the magic happens. Right now, the main content is on the left and
+                the sidebar is on the right. If you go into the markup for this document and dir="rtl" to the html
+                element, the two elements will swap spaces because CSS Grid honors text direction.
+            </p>
+        </div>
+    </main>
+    <aside class="right-menu">
+        <div class="rm-title">
+            <h3 class="rm-title__h3">The Sidebar</h3>
+        </div>
+        <div class="rm-content">
+            <p class="rm-content__text">
+                The sidebar typically contains things like:
+            </p>
+            <ol class="rm-content__list">
+                <li class="rm-content__list-item">Links</li>
+                <li class="rm-content__list-item">Menus</li>
+                <li class="rm-content__list-item">Ads</li>
+                <li class="rm-content__list-item">
+                    <a class="rm-content__link" href="#">Grid Layout Page 2</a>
+                </li>
+                <li class="rm-content__list-item">
+                    <a class="rm-content__link" href="#">Grid Layout Page 3</a>
+                </li>
+            </ol>
+        </div>
+    </aside>
+    <div class="left-part">
+        <div class="lp-text">
+            <p class="lp-text__p">
+                This should take up half the space
+            </p>
+        </div>
+    </div>
+    <div class="right-part">
+        <div class="rp-text">
+            <p class="rp-text__p">
+                This should take up the other half of the space
+            </p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="f-content">
+            <p class="f-content__text">
+                Content, layout, design:&nbsp;
+                <a class="f-content__link" href="https://github.com/sobikashi/GridLayout" target="_blank">
+                    Morten Rand-Hendriksen
+                </a>
+            </p>
+        </div>
+    </footer>
+</div>
+</div>
+</body>
+</html>
