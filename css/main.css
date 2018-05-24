@@ -142,6 +142,81 @@ body, html {
     font-family: 'Roboto-Light', sans-serif;
     font-size: 1.1rem;
 }
+/* ******************** page 2 ******************** */
+.container-p2 {
+    width: 100%;
+    height: 100%;
+    background-color: #111111;
+    margin: 0 auto;
+    display: -moz-grid;
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: 3fr 3fr 6fr;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "one one one one one one two two two two two two"
+      "one one one one one one three three three four four four"
+      "five five five six six six six six six four four four"
+    ;
+    height: 100%;
+    grid-gap: 10px;
+    padding: 10px;
+}
+.i01 {
+    grid-area: one;
+    background: white url(../img/01.jpg) no-repeat center center;
+    background-size: cover;
+}
+.i02 {
+    grid-area: two;
+    background: white url(../img/02.jpg) no-repeat center center;
+    background-size: cover;
+}
+.i03 {
+    grid-area: three;
+    background: white url(../img/03.jpg) no-repeat center center;
+    background-size: cover;
+}
+.i04 {
+    grid-area: four;
+    background: white url(../img/04.jpg) no-repeat center center;
+    background-size: cover;
+}
+.i05 {
+    grid-area: five;
+    background: white url(../img/05.jpg) no-repeat center center;
+    background-size: cover;
+}
+.i06 {
+   grid-area: six;
+    background: white url(../img/06.jpg) no-repeat center center;
+    background-size: cover;
+}
+/* ************************************************ */
+@media screen and (max-width: 1100px){
+    .container-p2 {
+        grid-template-rows: 2.5fr 2.5fr 2.5fr 4.5fr;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas:
+          "one one one one one one one one one one one one"
+          "two two two two two two two two two two two two"
+          "three three three three three three three three three four four four"
+          "five five five six six six six six six four four four"
+    ;
+    }
+}
+@media screen and (max-width: 980px){
+    .container-p2 {
+        grid-template-rows: 3fr 3fr 3fr 3fr;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas:
+          "one one one one one one one one one one one one"
+          "two two two two two two two two two two two two"
+          "three three three three three three three three three three three three"
+          "five five five six six six six six six four four four"
+    ;
+    }
+}
 @media screen and (max-width: 816px){
     .container {
         width: 100%;
@@ -158,6 +233,20 @@ body, html {
           "lp lp lp lp lp lp lp lp lp lp lp lp"
           "rp rp rp rp rp rp rp rp rp rp rp rp"
           "f f f f f f f f f f f f"
+    ;
+    }
+}
+@media screen and (max-width: 760px){
+    .container-p2 {
+        grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas:
+          "one one one one one one one one one one one one"
+          "two two two two two two two two two two two two"
+          "three three three three three three three three three three three three"
+          "four four four four four four four four four four four four"
+          "five five five five five five five five five five five five"
+          "six six six six six six six six six six six six"
     ;
     }
 }
