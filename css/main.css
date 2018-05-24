@@ -193,10 +193,88 @@ body, html {
     background-size: cover;
 }
 /* ************************************************ */
+/* ******************** page 3 ******************** */
+.content-center {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.container-p3 {
+    margin: auto;
+    width: 100%;
+    max-height: 908px;
+    background-color: #FFFFFF;
+    display: -moz-grid;
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: 7fr 5fr;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "a b c c c c c c d d d d"
+      "e f f g g g g g h h h h"
+;
+    height: 100%;
+    grid-gap: 7px;
+}
+.s1 {
+    grid-area: a;
+    background: white url(../img/s1.jpg) no-repeat center center;
+    background-size: cover;
+}
+.s2 {
+    grid-area: b;
+    background: white url(../img/s2.jpg) no-repeat center center;
+    background-size: cover;
+}
+.s3 {
+    grid-area: c;
+    background: white url(../img/s3.jpg) no-repeat center center;
+    background-size: cover;
+}
+.s4 {
+    grid-area: d;
+    background: white url(../img/s4.jpg) no-repeat center center;
+    background-size: cover;
+}
+.s5 {
+    grid-area: e;
+    background: white url(../img/s5.jpg) no-repeat center center;
+    background-size: cover;
+}
+.s6 {
+    grid-area: f;
+    background: white url(../img/s6.jpg) no-repeat center center;
+    background-size: cover;
+}
+.s7 {
+    grid-area: g;
+    background: white url(../img/s7.jpg) no-repeat center center;
+    background-size: cover;
+}
+.s8 {
+    grid-area: h;
+    background: white url(../img/s8.jpg) no-repeat center center;
+    background-size: cover;
+}
+/* ************************************************ */
+@media screen and (max-width: 1200px){
+    .container-p3 {
+        max-height: 100%;
+        grid-template-rows: 2fr 2fr 3fr 2fr 3fr;
+        grid-template-areas:
+          "a a a a a a a a a a a a"
+          "b b b b b b b b b b b b"
+          "c c c c c c c d d d d d"
+          "e e e e e e e e e e e e"
+          "f f f g g g g g h h h h"
+    ;
+    }
+}
 @media screen and (max-width: 1100px){
     .container-p2 {
         grid-template-rows: 2.5fr 2.5fr 2.5fr 4.5fr;
-        grid-template-columns: repeat(12, 1fr);
         grid-template-areas:
           "one one one one one one one one one one one one"
           "two two two two two two two two two two two two"
@@ -208,12 +286,22 @@ body, html {
 @media screen and (max-width: 980px){
     .container-p2 {
         grid-template-rows: 3fr 3fr 3fr 3fr;
-        grid-template-columns: repeat(12, 1fr);
         grid-template-areas:
           "one one one one one one one one one one one one"
           "two two two two two two two two two two two two"
           "three three three three three three three three three three three three"
           "five five five six six six six six six four four four"
+    ;
+    }
+    .container-p3 {
+        grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr;
+        grid-template-areas:
+          "a a a a a a a a a a a a"
+          "b b b b b b b b b b b b"
+          "c c c c c c c d d d d d"
+          "e e e e e e e e e e e e"
+          "f f f f f f f f f f f f"
+          "g g g g g g g h h h h h"
     ;
     }
 }
@@ -247,6 +335,19 @@ body, html {
           "four four four four four four four four four four four four"
           "five five five five five five five five five five five five"
           "six six six six six six six six six six six six"
+    ;
+    }
+    .container-p3 {
+        grid-template-rows: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
+        grid-template-areas:
+          "a a a a a a a a a a a a"
+          "b b b b b b b b b b b b"
+          "c c c c c c c c c c c c"
+          "d d d d d d d d d d d d"
+          "e e e e e e e e e e e e"
+          "f f f f f f f f f f f f"
+          "g g g g g g g g g g g g"
+          "h h h h h h h h h h h h"
     ;
     }
 }
